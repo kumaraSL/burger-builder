@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Aux/Aux';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -39,8 +39,6 @@ class BurgerBuilder extends Component {
 
     addIngredientHandler = (type) => {
         const oldCount = this.state.ingredients[type];
-        console.log(oldCount[this.type] + 'from oldCount');
-        
         const updateCount = oldCount + 1;
         const updatedIngredients = {
             ...this.state.ingredients
