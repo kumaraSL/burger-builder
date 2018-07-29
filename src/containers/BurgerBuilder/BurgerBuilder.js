@@ -81,6 +81,7 @@ class BurgerBuilder extends Component {
 
     purchaseContinueHandler = () => {
         // alert('You continue!');
+        this.setState({loading: true});
         axios.post('/orders.json');
     }
 
